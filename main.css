@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #36454f;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: #87ceeb;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container h1 {
+  margin-left: 60px;
+}
+.todo-form {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.todo-form input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  /* border: 2px solid #36454f; */
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  background-color: #f5f5f56f;
+}
+.todo-form input[type="text"]:focus {
+  outline: none;
+}
+.todo-form button {
+  padding: 10px 20px;
+  background-color: #36454f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.todo-form button:hover {
+  background-color: #87ceeb;
+}
+section .container {
+  display: flex;
+  flex-direction: column;
+}
+/* ############################# */
+/* Status */
+/* ############################# */
+.status {
+  display: flex;
+  list-style: none;
+  /* width: 100%; */
+  justify-content: space-around;
+  margin-left: -40px;
+}
+.status li {
+  display: flex;
+}
+.status li :first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.status li :last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.status span {
+  padding: 5px 10px;
+  background-color: #36454f;
+  color: white;
+}
+#remaining-tasks,
+#completed-tasks,
+#total-tasks {
+  background-color: #87ceeb;
+}
+/* ############################# */
+/* To Do List */
+/* ############################# */
+.todo-list {
+  /* margin: 70px; */
+  padding: 0;
+}
+.todo-list li {
+  list-style: none;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 1.5rem 1rem;
+  /* padding: 10px; */
+  border-radius: 5px;
+  border-left: 5px solid #87ceeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-list li div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.todo-list li.complete {
+  background-color: #d5f0ff;
+  color: #87ceeb;
+  text-decoration: line-through;
+}
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #36454f;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease-in-out;
+}
+input[type="checkbox"]::before {
+  content: url("data:image/svg+xml,%3Csvg style='color:white' xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 512 512'%3E%3Ctitle%3Eionicons-v5-e%3C/title%3E%3Cpolyline points='416 128 192 384 96 288' style='fill:none;stroke:%23000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'%3E%3C/polyline%3E%3C/svg%3E");
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+input[type="checkbox"]:checked {
+  background-color: #d5f0ff;
+  color: #87ceeb;
+  border: none;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.todo-list li button {
+  border: 0;
+  padding: 0.25rem;
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+}
+.todo-list li button svg {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.remove-task svg path {
+  transition: all 0.2s ease-in-out;
+}
+.remove-task:hover svg path {
+  stroke: #87ceeb;
+  color: #87ceeb;
+}
+.remove-task:active svg {
+  transform: scale(0.8);
+}
+.todo-list li span {
+  padding: 5px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.todo-list li span:focus {
+  background-color: #d5f0ff;
+  outline: none;
+}
+.todo-list li span[contenteditable="true"]:hover {
+  background-color: #d5f0ff;
+}
