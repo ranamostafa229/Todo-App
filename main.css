@@ -26,7 +26,6 @@ body {
 .todo-form input[type="text"] {
   padding: 10px;
   width: 70%;
-  /* border: 2px solid #36454f; */
   border-radius: 5px;
   border: none;
   margin-right: 10px;
@@ -56,7 +55,6 @@ section .container {
 .status {
   display: flex;
   list-style: none;
-  /* width: 100%; */
   justify-content: space-around;
   margin-left: -40px;
 }
@@ -85,7 +83,6 @@ section .container {
 /* To Do List */
 /* ############################# */
 .todo-list {
-  /* margin: 70px; */
   padding: 0;
 }
 .todo-list li {
@@ -93,7 +90,6 @@ section .container {
   background-color: #ffffff;
   margin-bottom: 10px;
   padding: 1.5rem 1rem;
-  /* padding: 10px; */
   border-radius: 5px;
   border-left: 5px solid #87ceeb;
   display: flex;
@@ -103,13 +99,19 @@ section .container {
 .todo-list li div {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.75rem;
+  color: #36454f;
+}
+.todo-list li span {
+  color: #36454f;
 }
 .todo-list li.complete {
   background-color: #d5f0ff;
   color: #87ceeb;
   text-decoration: line-through;
 }
+
 input[type="checkbox"] {
   appearance: none;
   background-color: transparent;
@@ -128,7 +130,7 @@ input[type="checkbox"]::before {
   transition: all 0.2s ease-in-out;
 }
 input[type="checkbox"]:checked {
-  background-color: #d5f0ff;
+  background-color: #87ceeb;
   color: #87ceeb;
   border: none;
 }
@@ -152,16 +154,12 @@ input[type="checkbox"]:checked::before {
 }
 .remove-task:hover svg path {
   stroke: #87ceeb;
-  color: #87ceeb;
+  transform: scale(0.8);
 }
 .remove-task:active svg {
   transform: scale(0.8);
 }
-.todo-list li span {
-  padding: 5px;
-  border-radius: 6px;
-  transition: all 0.2s ease-in-out;
-}
+
 .todo-list li span:focus {
   background-color: #d5f0ff;
   outline: none;
